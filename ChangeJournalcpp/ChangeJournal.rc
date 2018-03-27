@@ -1,0 +1,332 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ChangeJournal.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ChangeJournal.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ChangeJournal"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ChangeJournal Version 1.0 ",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Jason Zhang (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CHANGEJOURNAL_DIALOG DIALOGEX 0, 0, 320, 218
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ChangeJournal"
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Path &Detail",IDOK,7,197,60,14
+    PUSHBUTTON      "Cancel",IDCANCEL,276,197,37,14
+    CONTROL         "List2",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,55,306,138
+    COMBOBOX        IDC_CMB_DRIVE,39,14,29,50,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Drive:",IDC_STATIC,7,16,25,8
+    EDITTEXT        IDC_DETAIL,71,197,182,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Filter",IDC_BTN_FILTER,74,14,33,12
+    PUSHBUTTON      "Page&1",IDC_BTN_FIRST_PAGE,173,33,32,13
+    COMBOBOX        IDC_CMB_BLOCK,66,33,48,57,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Memory block:",IDC_STATIC,7,35,53,8
+    PUSHBUTTON      "&Query",IDC_BTN_QUERY,267,14,46,13
+    EDITTEXT        IDC_QUERY,116,14,145,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Next",IDC_BTN_NEXT_PAGE,277,33,32,13
+    LTEXT           "Page:",IDC_STATIC,216,35,21,8
+    EDITTEXT        IDC_PAGE,240,33,30,13,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DLG_FILTER DIALOG DISCARDABLE  0, 0, 311, 183
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filter"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,254,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,254,24,50,14
+    CONTROL         "BASIC_INFO_CHANGE",IDC_CK_BASIC_INFO_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,7,93,10
+    CONTROL         "CLOSE",IDC_CK_CLOSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,22,42,10
+    CONTROL         "COMPRESSION_CHANGE",IDC_CK_COMPRESSION_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,37,106,10
+    CONTROL         "DATA_EXTEND",IDC_CK_DATA_EXTEND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,52,69,10
+    CONTROL         "DATA_OVERWRITE",IDC_CK_DATA_OVERWRITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,67,84,10
+    CONTROL         "DATA_TRUNCATION",IDC_CK_DATA_TRUNCATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,82,86,10
+    CONTROL         "EA_CHANGE",IDC_CK_EA_CHANGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,97,60,10
+    CONTROL         "ENCRYPTION_CHANGE",IDC_CK_ENCRYPTION_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,112,98,10
+    CONTROL         "FILE_CREATE",IDC_CK_FILE_CREATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,127,65,10
+    CONTROL         "FILE_DELETE",IDC_CK_FILE_DELETE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,142,64,10
+    CONTROL         "HARD_LINK_CHANGE",IDC_CK_HARD_LINK_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,157,91,10
+    CONTROL         "INDEXABLE_CHANGE",IDC_CK_INDEXABLE_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,7,91,10
+    CONTROL         "NAMED_DATA_EXTEND",IDC_CK_NAMED_DATA_EXTEND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,22,98,10
+    CONTROL         "NAMED_DATA_OVERWRITE",IDC_CK_NAMED_DATA_OVERWRITE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,37,114,10
+    CONTROL         "NAMED_DATA_TRUNCATION",IDC_CK_NAMED_DATA_TRUNCATION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,52,116,10
+    CONTROL         "OBJECT_ID_CHANGE",IDC_CK_OBJECT_ID_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,67,91,10
+    CONTROL         "RENAME_NEW_NAME",IDC_CK_RENAME_NEW_NAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,82,92,10
+    CONTROL         "RENAME_OLD_NAME",IDC_CK_RENAME_OLD_NAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,97,90,10
+    CONTROL         "REPARSE_POINT_CHANGE",IDC_CK_REPARSE_POINT_CHANGE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,112,112,10
+    CONTROL         "SECURITY_CHANGE",IDC_CK_SECURITY_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,127,87,10
+    CONTROL         "STREAM_CHANGE",IDC_CK_STREAM_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,124,142,81,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ChangeJournal Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ChangeJournal\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ChangeJournal.EXE\0"
+            VALUE "ProductName", "ChangeJournal 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CHANGEJOURNAL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_DLG_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CHANGEJOURNAL_DIALOG DLGINIT
+BEGIN
+    IDC_CMB_DRIVE, 0x403, 3, 0
+0x3a43, "\000" 
+    IDC_CMB_DRIVE, 0x403, 3, 0
+0x3a44, "\000" 
+    IDC_CMB_DRIVE, 0x403, 3, 0
+0x3a45, "\000" 
+    IDC_CMB_DRIVE, 0x403, 3, 0
+0x3a46, "\000" 
+    IDC_CMB_DRIVE, 0x403, 3, 0
+0x3a47, "\000" 
+    IDC_CMB_DRIVE, 0x403, 3, 0
+0x3a48, "\000" 
+    IDC_CMB_BLOCK, 0x403, 5, 0
+0x3034, 0x3639, "\000" 
+    IDC_CMB_BLOCK, 0x403, 6, 0
+0x3631, 0x3833, 0x0034, 
+    IDC_CMB_BLOCK, 0x403, 7, 0
+0x3632, 0x3133, 0x3434, "\000" 
+    IDC_CMB_BLOCK, 0x403, 8, 0
+0x3031, 0x3834, 0x3735, 0x0036, 
+    IDC_CMB_BLOCK, 0x403, 8, 0
+0x3032, 0x3739, 0x3531, 0x0032, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&System"
+    BEGIN
+        MENUITEM "&Create",                     IDM_CREATE
+        MENUITEM "&Disable",                    IDM_DISABLE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 ChangeJournal(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ChangeJournal.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
